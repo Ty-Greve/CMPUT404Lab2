@@ -37,7 +37,7 @@ def handle_connection(conn, addr):
             if not data: # If the socket has been closed to further writes, break
                 break
             print(data)
-            requests += data
+            request += data
         response = send_request("www.google.com", 80, request) # Send it as a request to www.google.com
         conn.sendall(response) # Return the response from www.google.com back to the client
 
